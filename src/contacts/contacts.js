@@ -1,0 +1,16 @@
+import './App.css';
+import Header from './header';
+
+function Contact(){
+    return(
+        <div>
+            <h1>Contact Info</h1>
+        <form>
+            <div>
+            </div>
+        </form>
+        </div>
+    );
+};
+
+export default Contact;
