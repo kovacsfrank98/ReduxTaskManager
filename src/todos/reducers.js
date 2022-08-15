@@ -1,4 +1,4 @@
-import {ADD_TASK} from "./todos/action";
+import {ADD_TASK} from "./action";
 
 const initialState ={
     tasks: ["Fill up the car.", "Go grocery shopping.", "Pick up dry cleaning."]

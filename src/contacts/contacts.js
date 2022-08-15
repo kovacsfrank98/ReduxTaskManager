@@ -1,5 +1,5 @@
-import './App.css';
-import Header from './header';
+import '../App.css';
+import Header from '../header';
 
 function Contact(){
     return(
@@ -8,21 +8,22 @@ function Contact(){
         <form>
             <div>
                 <h3>First Name</h3>
-                <input type="text" id="first" name="first" required>
-            </div><br>
+                <input type="text" id="first" name="first" required />
+            </div>
             <div>
                 <h3>Last Name</h3>
-                <input type="text" id="last" name="last" required>
-            </div><br>
+                <input type="text" id="last" name="last" required />
+            </div>
             <div>
                 <h3>Email</h3>
-                <input type="text" id="email" name="email" required>
-            </div><br>
+                <input type="text" id="email" name="email" required />
+            </div>
             <div>
                 <h3>Comments</h3>
                 <textarea id="comments" name="comments" rows="5" cols="40">Comments...</textarea>
-            </div><br>
+            </div>
         </form>
+        <button type="submit" id="sendForm">SUBMIT</button>
         </div>
     );
 };

@@ -1,6 +1,6 @@
 import React from "react";
 import {connect} from "react-redux";
-import {addTask} from "./todos/action";
+import {addTask} from "./action";
 
 const TaskForm = ({dispatch}) => {
     let input;
