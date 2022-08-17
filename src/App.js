@@ -1,41 +1,25 @@
 import './App.css';
-import Tasks from './todos/todos';
-import TaskForm from './todos/addtodo';
-//import Contact from './contacts/contacts';
-//import {Routes, Route, NavLink, useNavagate} from 'react-router-dom';
+import List from './todos/todoList';
+import Contact from './contacts/contacts';
+import {Routes, Route, NavLink, BrowserRouter} from 'react-router-dom';
 
-/*
 function App() {
   return (
+    <div className="App">
+    <BrowserRouter>
+      <div className="navDiv">
+        <NavLink to="/" className="nav_link">To-Do List</NavLink>
+      </div>
+      <div className="navDiv">
+        <NavLink to="/contact" className="nav_link">Contact</NavLink>
+      </div>
     <Routes>
-        <Route index element={<TaskForm />} />
-        <Route path="tasks" element={<Tasks />}/>
-        <Route path="taskForm" element={<TaskForm />}/>
-        <Route path="contact" element={<Contact />}/>
+        <Route exact path="/" element={<List />}/>
+        <Route exact path="/contact" element={<Contact />}/>
     </Routes>
-  );  
-  
-  return (
-    <div className="App"> 
-        <nav>
-            <NavLink to="/tasks">App</NavLink>
-            <NavLink to="/contact">Contact</NavLink>
-        </nav>
-        <TaskForm />
-        <Tasks />
+    </BrowserRouter>
     </div>
   );
-}
-*/
-
-function App()
-{
-    return(
-        <div>
-        <TaskForm />
-        <Tasks />
-        </div>
-    );
 }
 
 export default App;
