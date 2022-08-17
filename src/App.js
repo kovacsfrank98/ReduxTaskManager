@@ -1,11 +1,20 @@
 import './App.css';
-import Header from './header';
 import Tasks from './todos/todos';
 import TaskForm from './todos/addtodo';
-import Contact from './contacts/contacts';
-import {Routes, Route, NavLink, useNavagate} from 'react-router-dom';
+//import Contact from './contacts/contacts';
+//import {Routes, Route, NavLink, useNavagate} from 'react-router-dom';
 
+/*
 function App() {
+  return (
+    <Routes>
+        <Route index element={<TaskForm />} />
+        <Route path="tasks" element={<Tasks />}/>
+        <Route path="taskForm" element={<TaskForm />}/>
+        <Route path="contact" element={<Contact />}/>
+    </Routes>
+  );  
+  
   return (
     <div className="App"> 
         <nav>
@@ -16,6 +25,17 @@ function App() {
         <Tasks />
     </div>
   );
+}
+*/
+
+function App()
+{
+    return(
+        <div>
+        <TaskForm />
+        <Tasks />
+        </div>
+    );
 }
 
 export default App;
