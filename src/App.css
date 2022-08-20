@@ -36,3 +36,26 @@
     transform: rotate(360deg);
   }
 }
+
+.finished
+{
+    text-decoration: line-through;
+}
+
+.navDiv
+{
+    margin: 10px;
+}
+
+.navBar
+{
+    display: flex;
+    background: black;
+    padding: 5px 0 5px 5px;
+    font-size: 20px;
+}
+
+ul
+{
+    list-style-type: none;
+}

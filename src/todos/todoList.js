@@ -1,13 +1,14 @@
 import '../App.css';
-import Tasks from './todos';
-import TaskForm from './addtodo';
+import Todos from './todos';
+import AddTodo from './addtodo';
 
 function List()
 {
     return(
         <div>
-        <TaskForm />
-        <Tasks />
+        <h1 className="banner">To-Do List</h1>
+        <AddTodo />
+        <Todos />
         </div>
     );
 }

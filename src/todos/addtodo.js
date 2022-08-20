@@ -1,25 +1,25 @@
-import React from "react";
-import {connect} from "react-redux";
-import {addTask} from "./action";
+import React, {useState} from "react";
+import {useDispatch} from "react-redux";
+import {addTodo} from "./todosSlice";
 
-const TaskForm = ({dispatch}) => {
-    let input;
+export default function AddTodo(){
+    const [text, setText] = useState('');
+    const dispatch = useDispatch();
     
-    return(
-        <div>
-            <h1>Task Form</h1>
-        <form
-            onSubmit={e => {
-                e.preventDefault();
-                dispatch(addTask(input.value));
-                input.value = "";
-            }}
-        >
-            <input ref={node => (input = node)} />
-            <button type="submit">ADD TASK</button>
+    const addTodoHandler = (event) => {
+        event.preventDefault();
+        dispatch(addTodo(text));
+        setText('');
+    };
+    
+    return (
+        <form onSubmit={addTodoHandler}>
+            <input
+                type='text'
+                value={text}
+                onChange={(e) => setText(e.target.value)}
+            />
+            <button>Add Todo</button>
         </form>
-        </div>
     );
-};
-
-export default connect()(TaskForm);
+}

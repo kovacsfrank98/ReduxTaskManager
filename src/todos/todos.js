@@ -1,30 +1,19 @@
-import React, {Component} from "react";
-import {connect} from "react-redux";
+import React from "react";
+import {useSelector} from "react-redux";
+import Todo from './todo';
 
-class Tasks extends Component {
-    render() {
-        const loader = () => {
-            if(this.props.tasks) {
-                return this.props.tasks.map(
-                    (task, i) => 
-                    <li key={i}>{task}</li>
-                );
-            } else {
-                return <p>Loading...</p>
-            }
-        };
-        
-        return(
-            <div>
-                <h2>TASKS</h2>
-            <ul>{loader()}</ul>
-            </div>
-        );
-    }
+export default function Todos() {
+    const todos = useSelector((state) => state.todos);
+    
+    return (
+        <div>
+            <ul>
+                {todos.map((todo) => (
+                    <li key={todo.id}>
+                        <Todo todo={todo} />
+                    </li>
+                 ))}
+            </ul>
+        </div>
+    );
 }
-            
-const mapStateToProps = state => ({
-   tasks: state.tasks         
-});
-        
-export default connect(mapStateToProps)(Tasks);
